@@ -37,7 +37,7 @@ body {
     margin: 0;
     letter-spacing: -1px;
     color: inherit;
-    font-size: 40%;
+    font-size: 40px;
   }
   
   
@@ -57,10 +57,10 @@ body {
 
   
   section {
-    height: 100%;
+    height: 100vh;
   }
   
-  /* MENU */
+  /* NAVIGATION */
   nav {
     width: 80%;
     margin: 0 auto;
@@ -81,7 +81,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color: #aaa;
-    font-weight: 300;
+    font-weight: 800;
     text-transform: uppercase;
     margin: 0 10px;
   }
@@ -91,12 +91,12 @@ body {
     transition: all .5s;
   }
   nav ul li a:hover {
-    color: rgb(8, 8, 8);
+    color: #555;
   }
   
   nav.blend ul li a {
     position: relative;
-    border-radius: 1px;
+    border-radius: 2px;
     overflow: hidden;
     z-index: 1;
   }
@@ -106,7 +106,7 @@ body {
   nav.blend ul li a:before,
   nav.blend ul li a:after {
     position: absolute;
-    width: 0%;
+    width: 0px;
     height: 100%;
     top: 0;
     bottom: 0;
@@ -171,7 +171,7 @@ body {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    height: 120%;
+    height: 120px;
     font-weight: 300;
     text-align: center;
     margin-top: 10px;
@@ -306,7 +306,7 @@ body {
   .menu {
     background: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 50%;
+    height: 50px;
   }
   
   .window {
@@ -323,8 +323,8 @@ body {
     flex-flow: column;
     box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    height: 40%;
-    width: 20%;
+    height: 560px;
+    width: 360px;
 
   }
   
@@ -332,9 +332,9 @@ body {
     background: linear-gradient(#0047d6, #ff0000);
     opacity: 0.85;
     filter: alpha(opacity=85);
-    height: 130%;
+    height: 560px;
     position: absolute;
-    width: 100%;
+    width: 360px;
     z-index: 1;
   }
   
@@ -345,7 +345,7 @@ body {
     bottom: 0px;
     margin: auto;
     width: 100%;
-    height: 60%;
+    height: 360px;
     z-index: 1;
     opacity:0.1;
     background-size:cover;
@@ -353,12 +353,12 @@ body {
   
   @media (max-width: 500px) {
     .window {
-      width: 30%;
-      height: 60%;
+      width: 100%;
+      height: 100%;
     }
     .overlay {
-      width: 30%;
-      height: 60%;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -411,7 +411,7 @@ padding: 0px 50px 50px 50px;
     
       .boks {
  
-        width: 70%;
+        width: 1000px;
         padding: 30px;
         border: 15px solid #000000;
         background: linear-gradient(#0055ff, #ff0000);
