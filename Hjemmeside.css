@@ -37,7 +37,7 @@ body {
     margin: 0;
     letter-spacing: -1px;
     color: inherit;
-    font-size: 40px;
+    font-size: 40%;
   }
   
   
@@ -57,7 +57,7 @@ body {
 
   
   section {
-    height: 100vh;
+    height: 100%;
   }
   
   /* MENU */
@@ -91,7 +91,7 @@ body {
     transition: all .5s;
   }
   nav ul li a:hover {
-    color: #555;
+    color: rgb(8, 8, 8);
   }
   
   nav.blend ul li a {
@@ -171,7 +171,7 @@ body {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    height: 120px;
+    height: 120%;
     font-weight: 300;
     text-align: center;
     margin-top: 10px;
@@ -306,7 +306,7 @@ body {
   .menu {
     background: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 50px;
+    height: 50%;
   }
   
   .window {
@@ -323,8 +323,8 @@ body {
     flex-flow: column;
     box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    height: 560px;
-    width: 360px;
+    height: 40%;
+    width: 20%;
 
   }
   
@@ -332,9 +332,9 @@ body {
     background: linear-gradient(#0047d6, #ff0000);
     opacity: 0.85;
     filter: alpha(opacity=85);
-    height: 560px;
+    height: 130%;
     position: absolute;
-    width: 360px;
+    width: 100%;
     z-index: 1;
   }
   
@@ -345,7 +345,7 @@ body {
     bottom: 0px;
     margin: auto;
     width: 100%;
-    height: 360px;
+    height: 60%;
     z-index: 1;
     opacity:0.1;
     background-size:cover;
@@ -353,12 +353,12 @@ body {
   
   @media (max-width: 500px) {
     .window {
-      width: 100%;
-      height: 100%;
+      width: 30%;
+      height: 60%;
     }
     .overlay {
-      width: 100%;
-      height: 100%;
+      width: 30%;
+      height: 60%;
     }
   }
 
@@ -411,7 +411,7 @@ padding: 0px 50px 50px 50px;
     
       .boks {
  
-        width: 1000px;
+        width: 70%;
         padding: 30px;
         border: 15px solid #000000;
         background: linear-gradient(#0055ff, #ff0000);
