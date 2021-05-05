@@ -188,9 +188,9 @@ body {
   .ghost-round {
     cursor: pointer;
     background: none;
-    border: 1px solid rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.65);
     border-radius: 25px;
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.65);
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
