@@ -60,7 +60,7 @@ body {
     height: 100vh;
   }
   
-  /* NAVIGATION */
+  /* MENU */
   nav {
     width: 80%;
     margin: 0 auto;
@@ -81,7 +81,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color: #aaa;
-    font-weight: 800;
+    font-weight: 300;
     text-transform: uppercase;
     margin: 0 10px;
   }
