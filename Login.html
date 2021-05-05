@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Programmering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Hjemmeside.css">
+<link rel="stylesheet" href="navbar.scss">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://requirejs.org/docs/release/2.3.5/minified/require.js%22%3E"> </script>
+</head>
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url(Billeder/bmw.jpg);
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+
+<div class='container'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>German Automotive</div>
+
+      <br>
+      <div class='subtitle'>New at German Automotive? 
+        <br> 
+        Create an account below!</div>
+      <div class='input-fields'>
+        <input type='email' placeholder='Email' class='input-line full-width'></input>
+        <input type='password' placeholder='Password' class='input-line full-width'></input>
+      </div>
+
+      <div><button onclick="window.location.href='home.html' " class='ghost-round full-width'>Log In</button></div>
+      <div><button onclick="window.location.href='signup.html' " class='ghost-round full-width'>Create Account</button></div>
+
+    </div> 
+  </div>
+</div>
+</html>

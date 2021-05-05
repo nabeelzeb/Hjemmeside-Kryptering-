@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Programmering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Hjemmeside.css">
+<link rel="stylesheet" href="navbar.scss">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<div class='container'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>German Automotive</div>
+      <div class='subtitle'>We need your information!</div>
+      <div class='input-fields'>
+        <input type='text' placeholder='First name' class='input-line full-width'></input>
+        <input type='text' placeholder='Surname' class='input-line full-width'></input>
+        <input type='email' placeholder='Email' class='input-line full-width'></input>
+        <input id = "kode" type='password' placeholder='Password' class='input-line full-width'></input>
+        <input type='password' placeholder='Repeat Password' class='input-line full-width'></input>
+
+        <div><button id = "knap" class='ghost-round full-width'>Next</button></div>
+      
+      </div>
+      
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+const button = document.getElementById ("knap")
+const password = document.getElementById ("kode")
+
+button.onclick =()=>{
+
+localStorage.setItem('kode', password.value);
+window.location.href = 'kryptering.html'
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>Programmering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Hjemmeside.css">
+<link rel="stylesheet" href="navbar.scss">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://requirejs.org/docs/release/2.3.5/minified/require.js%22%3E"> </script>
+
+<section style="background-image: url(Billeder/22.jpeg); 
+min-height: 100%;
+background-position: center;
+background-size: cover;
+color: rgb(0, 0, 0);">
+
+    <br>
+    <div class=about>
+
+        <a href="Home.html">
+            <h2><img src="Billeder/logo1.png" height="15%" width="15% class= " center></h2>
+        </a>
+
+        <h2>Database/Server</h2>
+
+        <div class="boks">
+            <h2>RSA</h2>
+            Your password has been inserted in this text box:
+            <input type="password" id="krypter" onchange="encryptFunction(this.value)">
+
+            <br>
+            <br>
+
+
+            Insert the encrypted text in the text box, to decrypt the your password:
+            <input type="text" onchange="decryptFunction(this.value)">
+
+            <p id="kryptered"></p>
+            <p id="dekryptered"></p>
+            <script src='bundle.js'></script>
+
+            <script>
+                
+                
+                const local = localStorage.getItem("kode");
+
+                document.getElementById("krypter").value = local;
+                encryptFunction(local);
+
+                function encryptFunction(val) {
+                    encrypted = window.key.encrypt(val, 'base64');
+                    console.log(encrypted);
+                    document.getElementById("kryptered").innerHTML = "Our database see your password as:  " + encrypted;
+                }
+
+                function decryptFunction(val) {
+                    const decrypt = window.key.decrypt(val, 'utf8');
+                    console.log(decrypt);
+                    document.getElementById("dekryptered").innerHTML = "When decrypted, your password is :  " + decrypt;
+                }
+            </script>
+
+        </div>
+
+        <br>
+
+        <div class="boks">
+
+            <h2>Cæsar</h2>
+
+            <!--Input felt-->
+            Your password has been inserted in this text box:
+            <input type="password" id="inputkrypter" onchange="caesarencrypt()">
+
+            <br>
+            <br>
+
+            Insert the encrypted text in the text box, to decrypt the your password:
+            <input type="text" id="inputdekrypter" onchange="caesardecrypt()">
+
+            <!-- Tekst linje-->
+            <p id="res"></p>
+            <p id="res2"></p>
+
+            <br>
+
+            <script>
+
+                const alfaRaw = "abcdefghijklmnopqrstuvwxyzæøå"; //alfabetet 
+                const alfa = alfaRaw.split(""); // Laver array af alfabet
+                const alfaRawShift = "klmnopqrstuvwxyzæøåabcdefghij"; // bogstavet flytter 10 gange til højre i alfabetet
+                const alfaShift = alfaRawShift.split("");// Laver array af omvendt alfabet
+                const input = document.getElementById("inputkrypter"); // input felt
+                const input2 = document.getElementById("inputdekrypter"); // input felt
+                const encrypt = document.getElementById("encrypt");
+                const decrypt = document.getElementById("decrypt");
+                const res = document.getElementById("res");
+                const local2 = localStorage.getItem("kode");
+
+                document.getElementById("inputkrypter").value = local2;
+                caesarencrypt();
+
+                function caesarencrypt() {
+                    const value = input.value.toLowerCase().split("");
+                    ceaser(value, "encrypt");
+                }
+
+                function caesardecrypt() {
+                    const value = input2.value.toLowerCase().split("");
+                    ceaser(value, "decrypt");
+                }
+
+                function ceaser(value, type) {
+                    let result = ""; // resultat af kryptering
+                    let result2 = ""; // resultat af dekryptering
+
+                    for (let i = 0; i < value.length; i++) {
+                        if (type == "encrypt") {
+                            let index = alfa.indexOf(value[i]);
+                            result += alfaShift[index];
+                            console.log(result);
+                            document.getElementById("res").innerHTML = "Our database see your password as: " + result;
+
+                        } else if (type == "decrypt") {
+                            let index = alfaShift.indexOf(value[i]);
+                            result2 += alfa[index];
+                            console.log(result2);
+                            document.getElementById("res2").innerHTML = "When decrypted, your password is: " + result2;
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+</section>
+
+<body>
+</body>
+
+</html>
