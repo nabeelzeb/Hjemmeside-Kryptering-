@@ -96,7 +96,7 @@ body {
   
   nav.blend ul li a {
     position: relative;
-    border-radius: 2px;
+    border-radius: 1px;
     overflow: hidden;
     z-index: 1;
   }
@@ -107,7 +107,7 @@ body {
   nav.blend ul li a:after {
     position: absolute;
     width: 0%;
-    height: 60%;
+    height: 100%;
     top: 0;
     bottom: 0;
     background: #000000;
@@ -127,7 +127,7 @@ body {
   
   nav.blend ul li a:hover:after,
   nav.blend ul li a:hover:before {
-    width: 60%;
+    width: 100%;
   }
   
   
@@ -207,7 +207,7 @@ body {
   
   .ghost-round:hover {
     background: rgba(255, 255, 255, 0.15);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
   }
